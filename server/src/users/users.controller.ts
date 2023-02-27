@@ -26,6 +26,8 @@ export class UsersController {
     createUserDto.password = bcrypt.hashSync(createUserDto.password, 12);
     return this.usersService.create(createUserDto);
   }
+
+  @Get()
   findAll() {
     return this.usersService.findAll();
   }
